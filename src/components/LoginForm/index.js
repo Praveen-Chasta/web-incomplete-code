@@ -21,7 +21,7 @@ class LoginForm extends Component {
   onSubmitSuccess = () => {
     const {history} = this.props
 
-    history.replace('/')
+    history.push('/')
   }
 
   onSubmitFailure = errorMsg => {
@@ -111,7 +111,7 @@ class LoginForm extends Component {
           <button type="submit" className="login-button">
             Login
           </button>
-          {showSubmitError && <p className="error-message">{errorMsg}</p>}
+          {showSubmitError && <p className="error-message">*{errorMsg}</p>}
         </form>
       </div>
     )
